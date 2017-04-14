@@ -6,7 +6,7 @@ public class Handler {
 
         this.lastInput = str.toLowerCase();
 
-        if((str.toLowerCase()=="?")||(str.toLowerCase()=="help")){
+        if((str.toLowerCase().equals("help")) || (str.equals("?"))) {
 
             this.help();
             return false;
