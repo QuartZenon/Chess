@@ -1,3 +1,4 @@
 public class Figure {
-    String color;
+    public String color;
+    public char symbol;
 }
