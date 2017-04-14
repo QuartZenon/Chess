@@ -28,7 +28,6 @@ public class Handler {
 
             } catch (NumberFormatException e) {
 
-                System.out.println("Try again!");
                 return false;
 
             }
