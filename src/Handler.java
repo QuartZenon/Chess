@@ -37,8 +37,6 @@ public class Handler {
         return false;
     }
 
-
-
     public void help(){
 
         System.out.println("Escape - input \"quit\"");

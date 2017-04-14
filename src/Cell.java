@@ -1,11 +1,10 @@
 public class Cell {
 
-    public String name = new String();
     public byte size = 3;
     public char[][] content = new char[this.size][this.size];
+    public String name;
 
     public Cell(){
-        this.name = "";
         boolean occupied = false;
         Figure subject;
 
