@@ -4,7 +4,7 @@ public class Main {
 
         Menu menu = new Menu();
         menu.starting();
-
+        Pawn pawn = new Pawn("c");
     }
 
 }

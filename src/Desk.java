@@ -18,37 +18,34 @@ public class Desk
 
     public void newGame(){
 
-        Pawn pawn;
-        Rook rook;
-        King king;
-        Queen queen;
-        Knight knight;
+        Figure figure = new Figure();
 
         for (int i = 0; i < this.size; i++) {
             for (int j = 0; j < this.size; j++) {
+                this.cells[i][j].content = new NoneFigure();
                 if(i == 1)
-                    this.cells[i][j].subject = new Pawn("black");
+                    this.cells[i][j].content = figure.set("pawn", "black");
                 else if(i == 6)
-                    this.cells[i][j].subject = new Pawn("white");
-                else this.cells[i][j].subject = new NoneFigure();
+                    this.cells[i][j].content = figure.set("pawn", "white");
             }
         }
-        this.cells[0][0].subject = new Rook("black");
-        this.cells[0][1].subject = new Knight("black");
-        this.cells[0][2].subject = new Bishop("black");
-        this.cells[0][3].subject = new King("black");
-        this.cells[0][4].subject = new Queen("black");
-        this.cells[0][5].subject = new Bishop("black");
-        this.cells[0][6].subject = new Knight("black");
-        this.cells[0][7].subject = new Rook("black");
-        this.cells[7][0].subject = new Rook("white");
-        this.cells[7][1].subject = new Knight("white");
-        this.cells[7][2].subject = new Bishop("white");
-        this.cells[7][3].subject = new Queen("white");
-        this.cells[7][4].subject = new King("white");
-        this.cells[7][5].subject = new Bishop("white");
-        this.cells[7][6].subject = new Knight("white");
-        this.cells[7][7].subject = new Rook("white");
+
+        this.cells[0][0].content = figure.set("rook", "black");
+        this.cells[0][1].content = figure.set("Knight", "black");
+        this.cells[0][2].content = figure.set("Bishop", "black");
+        this.cells[0][3].content = figure.set("King", "black");
+        this.cells[0][4].content = figure.set("Queen", "black");
+        this.cells[0][5].content = figure.set("Bishop", "black");
+        this.cells[0][6].content = figure.set("Knight", "black");
+        this.cells[0][7].content = figure.set("Rook", "black");
+        this.cells[7][0].content = figure.set("Rook", "white");
+        this.cells[7][1].content = figure.set("Knight", "white");
+        this.cells[7][2].content = figure.set("Bishop", "white");
+        this.cells[7][3].content = figure.set("Queen", "white");
+        this.cells[7][4].content = figure.set("King", "white");
+        this.cells[7][5].content = figure.set("Bishop", "white");
+        this.cells[7][6].content = figure.set("Knight", "white");
+        this.cells[7][7].content = figure.set("Rook", "white");
         this.show();
     }
 
@@ -56,7 +53,7 @@ public class Desk
         System.out.println("#################################");
         for (int i = 0; i < this.size; i++) {
             for (int j = 0; j < this.size; j++) {
-                System.out.print(this.cells[i][j].subject.symbol);
+                System.out.print(this.cells[i][j].content.symbol);
             }
             System.out.println();
         }

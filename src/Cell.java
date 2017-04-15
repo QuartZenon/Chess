@@ -1,12 +1,10 @@
 public class Cell {
 
-    public char content;
     public String name;
-    Figure subject;
+    public Object content;
+    public boolean occupied = false;
 
-    public Cell(){
-        boolean occupied = false;
 
-    }
+
 
 }
